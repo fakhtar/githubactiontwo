@@ -1,15 +1,13 @@
-name: first
+name: Events Demo 1
 on: [push,workflow_dispatch]
 jobs:
-  test:
+  deploy:
     runs-on: ubuntu-latest
     steps:
+      - name: output event data
+        run: echo "{{toJSON(github.event)}}"
       - name: Get code
         uses: actions/checkout@v4
-      - name: Install node
-        uses: actions/setup-node@v4
-        with:
-          node-version: '14'
       - name: install dependencies
         run: npm ci
       - name: npm run lint
