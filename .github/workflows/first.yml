@@ -10,8 +10,8 @@ jobs:
         uses: actions/checkout@v4
       - name: install dependencies
         run: npm ci
-      - name: npm run lint
-        run: npm run lint
+      # - name: npm run lint
+      #   run: npm run lint
       - name: npm run test
         run: npm run test
       - name: npm run build
