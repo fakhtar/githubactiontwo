@@ -15,6 +15,6 @@ jobs:
       # - name: npm run test
       #   run: npm run test
       - name: npm run build
-        run: npm build
+        run: npm run build
       - name: Echo done
         run: echo "Done linting, testing and building"
